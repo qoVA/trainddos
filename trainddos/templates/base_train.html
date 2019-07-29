@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>{% block title %}
+
+          {% endblock %}
+  </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/visualization_portion.css' %}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+
+  <style type="text/css">
+    .pb-5, .py-5{
+      padding-bottom:1.5rem!important;
+      padding-top:2rem!important;
+    }
+
+    .bg-dark{
+      background-color: #017017;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="http://localhost:8000/">NSU Department of Computer Science</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+       
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content -->
+  <div class="container" style="padding-top:20px;min-width: 1800px">
+  <!-- Features Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        {% block content%}
+
+        {% endblock %}
+		
+		<div class="col-lg-6 mb-6 " style="padding-top:20px;padding-bottom: 20px">
+        
+          <h2>Interactive Console</h2>
+
+           {% block terminal %}
+
+           {% endblock %}
+          
+       
+      </div>
+      </div>
+      <div class="col-lg-6" style="padding-top: 10%">
+          <div class="row">
+            <div class="col-lg-6 mb-6" style="padding-bottom:20px">
+              <div class="card h-100">
+                <h4 class="card-header">Attack Graph</h4>
+                <div class="card-body">
+                <!-- <img src="{% static 'graphs/show_1.png' %}" class="graph-viz" > -->
+                <img class="graph-viz" src="data:image/png;base64,{{image_base64}}" alt="some text to display to your users when the image does not show correctly" width=500 height=auto />
+               </div>
+              </div>
+            </div>
+	  
+      <div class="col-lg-6 mb-6" style="padding-bottom:20px">
+        <div class="card h-100">
+          <h4 class="card-header">CPU Utilization</h4>
+          <div class="card-body">
+            <img src="{% static 'graphs/show_2.png' %}" class="graph-viz">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mb-6" style="padding-bottom:20px">
+        <div class="card h-100">
+          <h4 class="card-header">Memory Utilization</h4>
+          <div class="card-body">
+          <img src="{% static 'graphs/show_3.png' %}" class="graph-viz">
+          </div>
+        </div>
+      </div>
+	  <div class="col-lg-6 mb-6" style="padding-bottom:20px">
+        <div class="card h-100">
+          <h4 class="card-header">Network Utilization</h4>
+          <div class="card-body">
+            <p class="card-text"><img src="{% static 'graphs/show_4.png' %}" class="graph-viz"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy;<a href="{% url 'home' %}"> Jewel Ossom 2019</a>></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

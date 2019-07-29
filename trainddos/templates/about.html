@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block title%}
+   
+{% endblock %}
+		
+{% block content%}
+<h1>Content</h1>
+	<p>Kindly reach us through the following means; </p>
+	<ul>
+		{% for field in Address %}
+		<li>Addresses :{{ forloop.counter }}: {{ field }}</li>
+		{% endfor %}
+	</ul>
+	{{  user }}
+
+{% endblock %}
+
+{% block visualization%}
+<h1>Visualization</h1>
+{% endblock %}
+
+
+{% block terminal%}
+<h1>Terminal</h1>
+{% endblock %}

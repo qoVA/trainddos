@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>
+  </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/modern-business.css' %}" rel="stylesheet">
+  <link href = "{% static 'css/other-css.css' %}">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="https://www.nsu.edu/About/Leadership-and-Initiatives/Search/Presidential-Search/assets/logo/NSU-logo-horz.png" height="80px" width="200px"></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+       
+      </div>
+    </div>
+  </nav>
+  <!-- Page Content -->
+  <div class="container" style="padding-top:100px;min-width: 1800px">
+  <!-- Features Section -->
+  <div class="jumbotron">
+    <h1>Department of Computer Science </h1>
+    <h2>DDOS/DOS TRAINING MODULE</h2>
+    <p class="lead"> Use this web application to learn attack visualizations </p>
+    <p>
+    	<div class="row">
+    			<p><h4>The attack visualization software allows students to learn about DOS/DDOS attacks.<br> 
+    			Open source tools to launch such attacks and view the effects in real time</h3></p>
+    	</div>
+        
+    </p>
+</div>
+
+<div class="row">
+	<div class="col-md-4">
+        <h2>About Project</h2>
+        <p>This web interface interacts with Virtual Machines supported by VMWare to achieve its purpose.</p>
+    </div>
+    <div class="col-md-4">
+        <h4>Lets start our lessons on DDOS/DOS attacks</h4>
+        <p>
+        </p>
+        <p><a class="btn btn-default" href="{% url 'training_name' %}">Take Lessons &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Comments</h2>
+        <p></p>
+        <p><a class="btn btn-default" href=".">Provide Feedback &raquo;</a></p>
+    </div>
+    
+</div>
+</div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Jewel Ossom 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

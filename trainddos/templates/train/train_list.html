@@ -1,0 +1,21 @@
+{% extends 'base_train.html'%}
+
+{% block title%}
+   
+{% endblock %}
+		
+{% block content%}
+<h1>Content</h1>
+
+	{% for module in modules %}
+	
+	<p>{{ module.id }}-<a href='{{ module.get_absolute_url }}'>
+	<strong>Title: {{ module.title|title }} </strong></a></p>
+
+	{% endfor %}
+	
+{% endblock %}
+
+{% block visualization%}
+<h1>Visualization</h1>
+{% endblock %}
